@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Project.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="450"
+        x:Class="Project.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Project">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <Grid RowDefinitions="Auto, * Auto">
+        <!-- Title Section -->
+        <Grid Grid.Row="0" Background="Orange" ColumnDefinitions="Auto, *" Height = "40">
+            <Rectangle Grid.Column="0" Width = "50"></Rectangle>
+            <Button Grid.Column="0" >
+                <Image Source="/Assets/home-page.png"/>
+            </Button>
+            <Label Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28">Project</Label>
+        </Grid>
+        <!-- Main Section-->
+        <Grid Grid.Row="1" ColumnDefinitions="Auto, Auto, *" Background="#333">
+            <Rectangle Grid.Column="0" Width="140" Fill="Aquamarine"></Rectangle>
+            <Rectangle Grid.Column="2"  Fill="white"></Rectangle>
+            <ScrollViewer Grid.Column="1">
+                
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</Window>

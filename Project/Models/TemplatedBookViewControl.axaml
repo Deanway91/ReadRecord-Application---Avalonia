@@ -1,0 +1,16 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Project.Models">
+    <Design.PreviewWith>
+        <controls:TemplatedBookViewControl />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|TemplatedBookViewControl">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <TextBlock Text="Templated Control" />
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
