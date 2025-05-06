@@ -7,9 +7,10 @@ public partial class MainWindowViewModel : ViewModelBase
 {
     public string Greeting { get; } = "\"Welcome to Avalonia! This is my added text.";
     public ObservableCollection<Book> Books { get; }
-
+    
     public MainWindowViewModel()
     {
+        
         Books = new ObservableCollection<Book>
         {
             new Book { Title = "書名1", Author = "作者A" },
