@@ -2,8 +2,8 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 
-namespace Project.Models;
+namespace Project;
 
-public class TemplatedBookViewControl : TemplatedControl
+public class BookBlockControl : TemplatedControl
 {
 }

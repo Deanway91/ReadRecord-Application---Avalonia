@@ -15,17 +15,17 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project
-build_property.ProjectDir = C:\Users\Deanway\RiderProjects\Project\Project\
+build_property.ProjectDir = C:\Users\Deanway\RiderProjects\ReadRecord-Application---Avalonia\Project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Deanway/RiderProjects/Project/Project/App.axaml]
+[C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Deanway/RiderProjects/Project/Project/Models/TemplatedBookViewControl.axaml]
+[C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/BookBlockControl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Deanway/RiderProjects/Project/Project/Views/MainWindow.axaml]
+[C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
