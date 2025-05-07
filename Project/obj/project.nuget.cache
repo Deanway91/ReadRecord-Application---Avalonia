@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uVnTGUZW+50=",
+  "dgSpecHash": "VfFpuhVKYRM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Deanway\\RiderProjects\\ReadRecord-Application---Avalonia\\Project\\Project.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\Deanway\\.nuget\\packages\\avalonia.win32\\11.2.7\\avalonia.win32.11.2.7.nupkg.sha512",
     "C:\\Users\\Deanway\\.nuget\\packages\\avalonia.x11\\11.2.7\\avalonia.x11.11.2.7.nupkg.sha512",
     "C:\\Users\\Deanway\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\Deanway\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\Deanway\\.nuget\\packages\\harfbuzzsharp\\7.3.0.3\\harfbuzzsharp.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Deanway\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\7.3.0.3\\harfbuzzsharp.nativeassets.linux.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Deanway\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0.3\\harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512",

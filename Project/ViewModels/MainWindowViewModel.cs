@@ -1,28 +1,27 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using Microsoft.Data.Sqlite;
 using Project.Models;
 
 namespace Project.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting { get; } = "\"Welcome to Avalonia! This is my added text.";
-    public ObservableCollection<Book> Books { get; }
+    public ObservableCollection<Book> Books { get; set; } = new ObservableCollection<Book>();
+    private BookRepository _bookRepository= new BookRepository();
     
     public MainWindowViewModel()
     {
+        _bookRepository.CreateTable();
         
-        Books = new ObservableCollection<Book>
-        {
-            new Book { Title = "書名1", Author = "作者A" },
-            new Book { Title = "書名2", Author = "作者B" },
-            new Book { Title = "書名3", Author = "作者C" },
-            new Book { Title = "書名4", Author = "作者D" },
-            new Book { Title = "書名5", Author = "作者E" },
-            new Book { Title = "書名6", Author = "作者F" },
-            new Book { Title = "書名7", Author = "作者G" },
-            new Book { Title = "書名8", Author = "作者H" },
-            new Book { Title = "書名9", Author = "作者I" },
-            new Book { Title = "書名10", Author = "作者J" }
-        };
+        LoadBook();
+    }
+
+    private void LoadBook()
+    {
+        var booksFromDb = _bookRepository.GetAllBooks();
+        Books.Clear();
+        foreach (var book in booksFromDb)
+            Books.Add(book); // 加入 ObservableCollection 以觸發 UI 更新
     }
 }
