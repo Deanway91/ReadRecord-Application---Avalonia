@@ -24,7 +24,10 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/BookBlockControl.axaml]
+[C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/Views/BookRecordView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/Views/BookShelfView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Deanway/RiderProjects/ReadRecord-Application---Avalonia/Project/Views/MainWindow.axaml]

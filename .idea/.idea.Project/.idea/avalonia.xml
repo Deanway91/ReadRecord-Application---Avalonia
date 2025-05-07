@@ -6,6 +6,7 @@
         <entry key="Project/App.axaml" value="Project/Project.csproj" />
         <entry key="Project/BookBlockControl.axaml" value="Project/Project.csproj" />
         <entry key="Project/Models/TemplatedBookViewControl.axaml" value="Project/Project.csproj" />
+        <entry key="Project/Views/BookRecord.axaml" value="Project/Project.csproj" />
         <entry key="Project/Views/MainWindow.axaml" value="Project/Project.csproj" />
         <entry key="Project/Views/TemplatedBookViewControl.axaml" value="Project/Project.csproj" />
       </map>

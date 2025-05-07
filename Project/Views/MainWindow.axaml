@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="450"
+        xmlns:view="clr-namespace:Project.Views"
         x:Class="Project.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Title="Project">
@@ -13,65 +14,21 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <Grid RowDefinitions="Auto, * Auto">
+    <Grid RowDefinitions="Auto, *">
         <!-- Title Section -->
-        <Grid Grid.Row="0" Background="Orange" ColumnDefinitions="Auto, *" Height = "40">
+        <Grid Grid.Row="0" Background="Orange" ColumnDefinitions="Auto, *, Auto" Height = "40">
             <Rectangle Grid.Column="0" Width = "50"></Rectangle>
             <Button Grid.Column="0" >
                 <Image Source="/Assets/home-page.png"/>
             </Button>
             <Label Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28">Project</Label>
+            <Button Grid.Column="2" >
+                <Image Source="/Assets/MagnifyingGlass_Icon.png"/>
+            </Button>
         </Grid>
         <!-- Main Section-->
-        <Grid Grid.Row="1" ColumnDefinitions="Auto, Auto, *" Background="#333">
-            <StackPanel Width="160" Background="Aquamarine">
-                <Button Height="40" Width="155" Margin="2, 2, 2, 2"></Button>
-                <Button Height="40" Width="155" Margin="2, 2, 2, 2"></Button>
-                <Button Height="40" Width="155" Margin="2, 2, 2, 2"></Button>
-                <Button Height="40" Width="155" Margin="2, 2, 2, 2"></Button>
-                
-            </StackPanel>
-            
-            <Grid Grid.Column="2" >
-               <ScrollViewer Grid.Column="0" Background="White" Padding="10, 10, 10,10">
-                   <ListBox ItemsSource ="{Binding Books}">
-                       <ItemsControl ItemsSource="{Binding Books}">
-                           <ItemsControl.ItemsPanel>
-                               <ItemsPanelTemplate>
-                                   <WrapPanel />
-                               </ItemsPanelTemplate>
-                           </ItemsControl.ItemsPanel>
-                           
-                           <ItemsControl.ItemTemplate>
-                               <DataTemplate>
-                                   <Border BorderBrush="black" BorderThickness="1" Margin="5" Padding="10" Width="120" Height="200">
-                                       <StackPanel VerticalAlignment="Center">
-                                           <Button>
-                                               <Image Source="{Binding Thumbnail}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                           </Button>
-                                           <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" FontWeight="Bold" />
-                                           <TextBlock Text="{Binding Author}" HorizontalAlignment="Center" FontStyle="Italic" />
-                                       </StackPanel>
-                                   </Border>
-                               </DataTemplate>
-                           </ItemsControl.ItemTemplate>
-                       </ItemsControl>
-                   </ListBox>
-                </ScrollViewer>
-                
-                <Button Width="40"
-                        Height="40"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Bottom"
-                        Margin="0, 0 , 0 , 50"
-                        ZIndex="1"
-                        Background="LightGreen"
-                        Opacity="0.7">
-                     <Image/>
-                </Button>
-            </Grid>
-            
-        </Grid>
+        <ContentControl Grid.Row="1" Content ="{Binding CurrentPage}"/>
+        
     </Grid>
 
 </Window>
