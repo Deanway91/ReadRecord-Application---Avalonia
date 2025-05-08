@@ -9,14 +9,8 @@ namespace Project.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    [ObservableProperty]
-    private ViewModelBase _currentPage;
-    
-    private readonly BookRecordViewModel _bookRecordPage = new();
-    private readonly BookShelfViewModel _bookShelfPage = new();
-    
     public MainWindowViewModel()
     {
-        CurrentPage = _bookShelfPage;
+        
     }
 }

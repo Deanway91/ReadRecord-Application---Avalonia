@@ -6,31 +6,29 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Project.Views.BookShelfView"
              x:DataType="vm:BookShelfViewModel">
-    <Grid >
+    <Grid>
         <ScrollViewer Grid.Column="0" Background="White" Padding="10, 10, 10,10">
-            <ListBox ItemsSource ="{Binding Books}">
-                <ItemsControl ItemsSource="{Binding Books}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                       
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border BorderBrush="black" BorderThickness="1" Margin="5" Padding="10" Width="120" Height="200">
-                                <StackPanel VerticalAlignment="Center">
-                                    <Button>
-                                        <Image Source="{Binding Thumbnail}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Button>
-                                    <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" FontWeight="Bold" />
-                                    <TextBlock Text="{Binding Author}" HorizontalAlignment="Center" FontStyle="Italic" />
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ListBox>
+            <ItemsControl ItemsSource="{Binding Books}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                   
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="black" BorderThickness="1" Margin="5" Padding="10" Width="120" Height="200">
+                            <Grid RowDefinitions="Auto, Auto, Auto, *" VerticalAlignment="Center">
+                                <Button Grid.Row="0" Click="OnBookClick" CommandParameter="{Binding}">
+                                    <Image Source="{Binding Thumbnail}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Button>
+                                <TextBlock Grid.Row="1" Text="{Binding Title}" HorizontalAlignment="Center" FontWeight="Bold" />
+                                <TextBlock Grid.Row="2" Text="{Binding Author}" HorizontalAlignment="Center" FontStyle="Italic" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </ScrollViewer>
             
         <Button Width="40"

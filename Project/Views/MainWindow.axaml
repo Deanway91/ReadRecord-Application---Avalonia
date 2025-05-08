@@ -14,6 +14,7 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+    
     <Grid RowDefinitions="Auto, *">
         <!-- Title Section -->
         <Grid Grid.Row="0" Background="Orange" ColumnDefinitions="Auto, *, Auto" Height = "40">
@@ -27,7 +28,7 @@
             </Button>
         </Grid>
         <!-- Main Section-->
-        <ContentControl Grid.Row="1" Content ="{Binding CurrentPage}"/>
+        <ContentControl Grid.Row="1" x:Name="MainContent"/>
         
     </Grid>
 
